@@ -7,7 +7,7 @@ angular.module('config', [])
     'endpoint'    : "/api",
     'provider'    : "$PROVIDER",
     'client_id'   : "$CLIENT_ID",
-    'gitlab_url'  : "$GITLAB_URL"
+    'gitlab_url'  : "$GITLAB_URL",
 
     'colors'      : {
       'severity': {
@@ -22,7 +22,7 @@ angular.module('config', [])
       'authenticated': '#00AA5A',
       'active'       : '#00A1BC',
       'security'     : '#333333',
-    },
+    }
         }
   });
 EOF
