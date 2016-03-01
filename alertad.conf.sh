@@ -16,4 +16,20 @@ GITLAB_URL = '$GITLAB_URL'
 ALLOWED_GITLAB_GROUPS = ['$ALLOWED_GITLAB_GROUPS']
 
 PLUGINS = ['reject']
+
+
+SEVERITY_MAP = {
+    'BLOCKING'     : 1,
+    'ERROR'        : 2,
+    'DISABLED'     : 3,
+    'configuring'  : 4,
+    'waiting'      : 5,
+    'ready'        : 5,
+    'negotiating'  : 5,
+    'authenticated': 5,
+    'active'       : 6,
+    'security'     : 8,
+    'unknown'      : 9
+}
+
 EOF
