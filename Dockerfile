@@ -4,11 +4,12 @@ MAINTAINER Nick Satterly <nick.satterly@theguardian.com>
 
 RUN apt-get update && apt-get install -y git wget build-essential python python-setuptools python-pip python-dev libffi-dev nginx
 
-RUN pip install git+https://github.com/guardian/alerta.git@config-severity-codes
+RUN pip install alerta-server
 RUN pip install gunicorn supervisor
 
-RUN git clone https://github.com/alerta/angular-alerta-webui.git && cd angular-alerta-webui && git checkout config-severity-codes
-RUN mv angular-alerta-webui*/app /app
+
+RUN wget -q -O - https://github.com/alerta/angular-alerta-webui/tarball/master | tar zxf -
+RUN mv alerta-angular-alerta-webui-*/app /app
 
 ENV ALERTA_SVR_CONF_FILE /alertad.conf
 ENV BASE_URL /api
